@@ -1,15 +1,15 @@
 import React from 'react';
-import {BrowserRouter,Switch,Route}from "react-router-dom";
+import {HashRouter,Switch,Route}from "react-router-dom";
 import App from "../App"
 import Recipe from "./recipe"
 const Router=()=>{
 	return(
-	<BrowserRouter basename='/recipe-finder'>
+	<HashRouter basename='/recipe-finder'>
 		<Switch>
 			<Route path='/'  component={App} exact/>
 		   <Route path='/recipe/:id' component={Recipe}/>
         </Switch>	
-	</BrowserRouter>
+	</HashRouter>
 	)
 }
 export default Router;
